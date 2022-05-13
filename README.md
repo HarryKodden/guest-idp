@@ -50,7 +50,7 @@ This Guest IDP has followin structure:
 
 The guest-idp is deployed. Only the platform adminsitrator exists.
 The platform administrator create an 'inistitute' by providing:
-* disolayname of the institute
+* displayname of the institute
 * shortname of institute (used in email address subdomains)
 * email address of administrator.
 
@@ -59,23 +59,21 @@ By providing these details, the system will create a branch in the tree for this
 ### Workflow: Institute student enrollment
 
 The institute administrator logs in with his administrator email in combination with his password and then he is presented with follwoing options:
-a) Change his own password
-b) Invite a student by entering following details:
-    * firstname
-    * lastname
-    * email ( this is personal email address of the student)
+* Change his own password
+* Invite a student by entering following details:
+  * firstname
+  * lastname
+  * email ( this is personal email address of the student)
   
-ad b) workflow invite student.
-Upon entry of above details, the system generates 2 additional attributes:
-* password
-* uid: This uid is in the form of email address: 
+* Upon entry of above details, the system generates 2 additional attributes:
+  * password
+  * uid: This uid is in the form of email address: 
   
 ```
 <firstname>.<lastname>@<institute-shortname>.<guest-idp>
 ```
 
-By inviting a student, the systeme create an identity in the people branch of this institute and sends an invitation email to the person with a initial one-time-password.
-That generated password is also stored in the person details record.
+By inviting a student, the system creates an identity in the people branch of this institute and sends an invitation email to the person with a the initial generated one-time-password.
 
 ### Workflow: Student accepting the invitation email
 
@@ -83,7 +81,6 @@ The invitation email contains a link to the profile page that the student needs 
 The profile page present asks for the password that was in the inviation mail.
 When entered the correct password and forcelbly adjusted to a new value, the student will be presented with his 'uid'.
 
-He needs to register both this uid and his new password.
 
 ### Workflow: Student authenticating to edudbadges using the guest-idp.
 
